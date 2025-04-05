@@ -1,0 +1,299 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* Align content to the top */
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  color: #333;
+}
+
+.wrapper{
+   padding: 20px;
+}
+.user-wrapper{
+   display: flex;
+   justify-content: flex-end;
+   gap: 20px;
+   align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #4a90e2;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin-left: 0; /* Align it to the left */
+}
+
+.header .username-section {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.date-filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.category-filter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.table-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.add-expense {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;  
+  align-items: center;
+}
+
+.filters input[type="date"],
+.filters select {
+  width: 180px;
+}
+
+.filters button {
+  margin-top: 0;
+  width: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1.1rem;
+}
+
+table td {
+  background-color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Styles */
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ab7;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"],
+input[type="floatInput"],
+input[type="date"],
+select {
+  padding: 10px;
+  width: 200px; /* Ensure inputs are the same width */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="floatInput"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+
+/* Modal Styling */
+.react-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.ReactModal__Content {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ReactModal__Content h2 {
+  font-size: 1.5rem;
+  color: #4a90e2;
+  margin-bottom: 20px;
+}
+
+.ReactModal__Content button {
+  background-color: #ff6347;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.ReactModal__Content button:hover {
+  background-color: #e53e3e;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+  width: 100%;
+}
+
+/* User Name Input Styling */
+input[type="text"] {
+  width: 200px;
+}
+
+input[type="text"]:focus {
+  border-color: #4a90e2;
+}
+
+
+.modal-wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+
+.modal {
+  width: 80%;
+  max-width: 600px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1000;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Modal Container */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.modal-content {
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.delete-button{
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
