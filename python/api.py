@@ -45,7 +45,7 @@ def upsert_expense(expense: CreateExpensePayload):
 def get_expenses(get_expenses_payload: GetExpensesPayload):
     session: Session = SessionLocal()
     expenses = service.get_expenses(payload = get_expenses_payload, session=session)
-    return expenses
+    return {"expenses": expenses}
 
 @app.delete("/{expense_id}")
 def delete_expense(expense_id: int):

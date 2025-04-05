@@ -42,7 +42,7 @@ function App() {
           end_date: dateTo,
           category_name: selectedCategory,
         });
-        setFilteredExpenses(response.data);
+        setFilteredExpenses(response.data.expenses);
       } catch (error) {
         console.error("Error fetching expenses:", error);
       }
